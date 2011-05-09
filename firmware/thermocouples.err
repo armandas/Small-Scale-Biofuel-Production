@@ -1,0 +1,3 @@
+Warning[2066] thermocouples/thermocouples.c 108 : type qualifier mismatch in assignment
+Warning[2066] thermocouples/thermocouples.c 111 : type qualifier mismatch in assignment
+Warning[2066] thermocouples/thermocouples.c 114 : type qualifier mismatch in assignment

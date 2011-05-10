@@ -34,14 +34,13 @@ float adc_sample(unsigned char channel)
     SSP1BUF = 1;
     while (SSP1STATbits.BF == 0);
 
-    // sample channe in single-ended mode
+    // sample channel in single-ended mode
     // and read two bits of the data
     SSP1BUF = SGL | (channel << 4);
     while (SSP1STATbits.BF == 0);
     rx_data = 0b11 & SSP1BUF;
 
-    adc_value = rx_data;
-    adc_value = adc_value * 256;
+    adc_value = (rx_data << 8);
 
     // read the rest of the data
     SSP1BUF = 0;
